@@ -1,0 +1,8 @@
+.DS_Store
+.idea
+*.iws
+*.ipr
+*.iml
+target/
+reqxl_frontend/target/
+reqxl_backend/target/
