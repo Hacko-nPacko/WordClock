@@ -1,0 +1,6 @@
+/usr/bin/clock/ip: ifconfig wlan0 | grep "inet addr" | awk -F: '{print $2}' | awk '{print $1}'
+/usr/bin/clock/ntp: ntpq -nc peers | awk '{if($4=="u")sum+=1} END {print sum}'
+/usr/bin/clock/ping: ping -c4 www.google.com | grep 'received' | awk -F',' '{ print $2}' | awk '{ print $1}'
+/usr/bin/clock/wifi: /usr/bin/pretty-wifi-info.lua | grep Signal
+
+// String solution = "ебезЧасътбез|седемчетирит|петдеветосем|зединайсетри|трдесетшестт|идванайсетти|ечетиресетит|епполовинаеи|нпетдесеттри|ттрийсетбезт|едидвайсетим|пепетнайсетт";
